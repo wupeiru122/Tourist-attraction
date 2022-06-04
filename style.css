@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -57,6 +58,7 @@ table {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: '微軟正黑體';
   line-height: 1.6;
 }
 
@@ -70,16 +72,51 @@ button {
   cursor: pointer;
 }
 
-section.banner {
+header.container__header {
+  position: relative;
   width: 100%;
   height: 300px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#dbe0df), to(#4273ab));
-  background: linear-gradient(to top, #dbe0df, #4273ab 100%);
+  margin: auto;
+  text-align: center;
+  border-bottom: solid 1px #dbe0df;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbe0df), to(#4275ab));
+  background: linear-gradient(to top, #dbe0df, #4275ab 100%);
 }
 
-section.banner div.bannerBorder {
+header.container__header .header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: inline-block;
-  border: 3px solid #fff;
+  border: solid 2px #fff;
+  padding: 30px 50px;
+  letter-spacing: 3px;
+  color: #fff;
+  width: 60%;
+}
+
+header.container__header .header__title {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+nav.btnNav {
+  padding: 20px;
+}
+
+nav.btnNav div.search {
+  text-align: end;
+}
+
+nav.btnNav div.search i.fa-magnifying-glass {
+  padding: 5px;
+}
+
+nav.btnNav a.favList {
+  text-decoration: none;
+  text-align: right;
 }
 
 main.viewpoint {
