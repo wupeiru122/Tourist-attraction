@@ -1,0 +1,65 @@
+// 基礎設定
+@import "./var";
+@import "_reset";
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+//按鈕
+button{
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: #4273ab;
+    border: 0px;
+    cursor: pointer;
+}
+
+section.banner{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top, #dbe0df, #4273ab 100%);
+}
+
+
+main.viewpoint{
+    border: 3px solid blue;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.col{
+    border: 1px solid rgb(173, 173, 173);
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+figure.viewpointCard{
+    width: 400px;
+}
+
+figcaption.card-body{
+    padding: 10px;
+}
+
+.picCard {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+i.fa-location-dot{
+    margin-right: 5px;
+}
+
+i.fa-magnifying-glass{
+    display: inline-block;
+}
