@@ -16,7 +16,8 @@ button{
     width: 100px;
     height: 30px;
     margin: 0 auto;
-    background-color: #4273ab;
+    background-color: #306198;
+    color: #fff;
     border: 0px;
     cursor: pointer;
 }
@@ -25,7 +26,13 @@ section.banner{
     width: 100%;
     height: 300px;
     background: linear-gradient(to top, #dbe0df, #4273ab 100%);
+    div.bannerBorder{
+        display: inline-block;
+        border: 3px solid #fff;;
+    }
+    
 }
+
 
 
 main.viewpoint{

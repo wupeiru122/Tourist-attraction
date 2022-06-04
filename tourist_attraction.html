@@ -17,7 +17,9 @@
 <body>
 
     <section class="banner">
-        <h3 class="banner-title">台北市 - 遊憩景點</h3>
+        <div class="bannerBorder">
+            <h3 class="banner-title">台北市 - 遊憩景點</h3>
+        </div>
     </section>
 
     <button id="btnPre">上一頁</button>
@@ -37,13 +39,27 @@
     <script>
         let spotList;
 
+        //分頁
+        let page = 1;
+        document.querySelector('#btnPre').addEventListener('click', ()=> {
+            page--;
+            if(page === 0){
+                page = 1;
+                return;
+            }
+            getSpotList();
+        });
+        document.querySelector('#btnNext').addEventListener('click', ()=> {
+            page++;
+            getSpotList();
+        });
 
         const viewpoint = document.querySelector('#viewpoint');
         let fakePic = 'https://via.placeholder.com/400x200';
 
         getSpotList();
         function getSpotList(){
-            const url = `https://www.travel.taipei/open-api/zh-tw/Attractions/All`;
+            const url = `https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`;
             fetch(url, {
                 headers: {
                     Accept: 'application/json'
