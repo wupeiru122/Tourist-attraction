@@ -63,13 +63,18 @@ table {
 }
 
 button {
-  width: 100px;
+  width: 120px;
   height: 30px;
   margin: 0 auto;
   background-color: #306198;
   color: #fff;
   border: 0px;
+  font-size: 1rem;
   cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.6;
 }
 
 header.container__header {
@@ -79,8 +84,8 @@ header.container__header {
   margin: auto;
   text-align: center;
   border-bottom: solid 1px #dbe0df;
-  background: -webkit-gradient(linear, left bottom, left top, from(#dbe0df), to(#4275ab));
-  background: linear-gradient(to top, #dbe0df, #4275ab 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#dbe0df), to(#306198));
+  background: linear-gradient(to top, #dbe0df, #306198 100%);
 }
 
 header.container__header .header {
@@ -98,8 +103,7 @@ header.container__header .header {
 }
 
 header.container__header .header__title {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 1.875rem;
 }
 
 nav.btnNav {
@@ -114,13 +118,20 @@ nav.btnNav div.search i.fa-magnifying-glass {
   padding: 5px;
 }
 
-nav.btnNav a.favList {
+nav.btnNav div.pageFav {
+  position: relative;
+}
+
+nav.btnNav div.pageFav a.favList {
+  position: absolute;
+  right: 0;
+  top: 50%;
   text-decoration: none;
   text-align: right;
+  color: #306198;
 }
 
 main.viewpoint {
-  border: 3px solid blue;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,8 +151,18 @@ figure.viewpointCard {
   width: 400px;
 }
 
-figcaption.card-body {
+figure.viewpointCard figcaption.card-body {
   padding: 10px;
+}
+
+figure.viewpointCard figcaption.card-body input {
+  width: 16px;
+  height: 16px;
+}
+
+figure.viewpointCard figcaption.card-body h4.card-title {
+  display: inline-block;
+  font-size: 1.25rem;
 }
 
 .picCard {

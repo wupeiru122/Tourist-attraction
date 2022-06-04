@@ -14,13 +14,17 @@
 
 //按鈕
 button{
-    width: 100px;
+    width: 120px;
     height: 30px;
     margin: 0 auto;
     background-color: #306198;
     color: #fff;
     border: 0px;
+    font-size: map-get($FontSize, h6);
     cursor: pointer;
+    &:hover {
+        opacity: 0.6;
+    }
 }
 
 header.container__header{
@@ -30,7 +34,7 @@ header.container__header{
     margin: auto;
     text-align: center;
     border-bottom: solid 1px #dbe0df;
-    background: linear-gradient(to top, #dbe0df, #4275ab 100%);
+    background: linear-gradient(to top, #dbe0df, #306198 100%);
     .header {
         position: absolute;
         top: 50%;
@@ -44,8 +48,7 @@ header.container__header{
         width: 60%;
     }
     .header__title {
-        font-size: 30px;
-        font-weight: 300;
+        font-size: map-get($FontSize, h3);
     }
 }
 
@@ -58,16 +61,23 @@ nav.btnNav{
             padding: 5px;
         }
     }
-    a.favList{
-        text-decoration:none;
-        text-align: right;
+    div.pageFav{
+        position: relative;
+        a.favList{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            text-decoration:none;
+            text-align: right;
+            color: #306198;
+        }
     }
+    
 }
 
 
 
 main.viewpoint{
-    border: 3px solid blue;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -82,11 +92,24 @@ section.col{
 
 figure.viewpointCard{
     width: 400px;
+
+    figcaption.card-body{
+        padding: 10px;
+
+        input{
+            width: 16px;
+            height: 16px;
+        }
+
+        h4.card-title{
+            display:inline-block;
+            font-size: map-get($FontSize, h4);
+
+        }
+    }
 }
 
-figcaption.card-body{
-    padding: 10px;
-}
+
 
 .picCard {
     width: 100%;

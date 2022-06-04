@@ -28,13 +28,15 @@
             <input id="searchText"><i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
-        <button id="btnPre">上一頁</button>
-        <button id="btnNext">下一頁</button>
 
-        <button id="btnFavorite">加入我的最愛</button>
+        <div class="pageFav">
+            <button id="btnPre">上一頁</button>
+            <button id="btnNext">下一頁</button>
 
-        <a class="favList" href=""><i class="fa-solid fa-bookmark"></i>查看我的最愛</a>
+            <button id="btnFavorite"><i class="fa-solid fa-heart"></i>加入我的最愛</button>
 
+            <a class="favList" href=""><i class="fa-solid fa-bookmark"></i>查看我的最愛</a>
+        </div>
     </nav>
 
     <main class="viewpoint" id="viewpoint"></main>
@@ -78,6 +80,12 @@
             sessionStorage.setItem('favSpotList', JSON.stringify(favSpotList));
         });
 
+        //查詢
+        document.querySelector('#searchText').addEventListener('input' , e =>{
+            const spots = spotList.filter(spot => spot.name.includes(e.target.value));
+            showSpotList(spots);
+        });
+
         const viewpoint = document.querySelector('#viewpoint');
         let fakePic = 'https://via.placeholder.com/400x200';
 
@@ -106,7 +114,7 @@
                         <img src="${spot.images[0]?.src ?? fakePic}" class="picCard" alt="...">
                         <figcaption class="card-body">
                             <input type="checkbox" id='cb${spot.id}'>
-                            <h3 class="card-title" style="display:inline-block;">${spot.name}</h3>
+                            <h4 class="card-title">${spot.name}</h4>
                             <h4 class="card-distric"><i class="fa-solid fa-location-dot"></i>${spot.distric}</h4>
                             <p class="card-text" style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;">
                                 ${spot.introduction}
