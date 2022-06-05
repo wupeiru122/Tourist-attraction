@@ -88,18 +88,18 @@ header.container__header {
   background: linear-gradient(to top, #dbe0df, #306198 100%);
 }
 
-header.container__header h4.comeback {
+header.container__header h4.comeback, header.container__header h4.check {
   text-align: right;
   font-size: 1.25rem;
   padding: 10px;
 }
 
-header.container__header h4.comeback a {
+header.container__header h4.comeback a, header.container__header h4.check a {
   text-decoration: none;
   color: #fff;
 }
 
-header.container__header h4.comeback i.fa-arrow-up-right-from-square {
+header.container__header h4.comeback i.fa-arrow-up-right-from-square, header.container__header h4.comeback i.fa-bookmark, header.container__header h4.check i.fa-arrow-up-right-from-square, header.container__header h4.check i.fa-bookmark {
   padding: 5px;
 }
 
@@ -131,23 +131,6 @@ nav.btnNav div.search {
 
 nav.btnNav div.search i.fa-magnifying-glass {
   display: inline-block;
-  padding: 5px;
-}
-
-nav.btnNav div.pageFav {
-  position: relative;
-}
-
-nav.btnNav div.pageFav a.favList {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  text-decoration: none;
-  text-align: right;
-  color: #306198;
-}
-
-nav.btnNav div.pageFav i.fa-bookmark {
   padding: 5px;
 }
 

@@ -37,7 +37,7 @@ header.container__header{
     text-align: center;
     border-bottom: solid 1px #fff;
     background: linear-gradient(to top, #dbe0df, #306198 100%);
-    h4.comeback{
+    h4.comeback,h4.check{
         text-align: right;
         font-size: map-get($FontSize, h4);
         padding: 10px;
@@ -45,7 +45,7 @@ header.container__header{
             text-decoration: none;
             color: #fff;
         }
-        i.fa-arrow-up-right-from-square{
+        i.fa-arrow-up-right-from-square,i.fa-bookmark{
             padding: 5px;
         }
     }
@@ -73,21 +73,6 @@ nav.btnNav{
         text-align: end;
         i.fa-magnifying-glass{
             display: inline-block;
-            padding: 5px;
-        }
-    }
-
-    div.pageFav{
-        position: relative;
-        a.favList{
-            position: absolute;
-            right: 0;
-            top: 50%;
-            text-decoration:none;
-            text-align: right;
-            color: #306198;
-        }
-        i.fa-bookmark{
             padding: 5px;
         }
     }
