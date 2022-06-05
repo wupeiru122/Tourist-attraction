@@ -179,4 +179,12 @@ i.fa-location-dot {
 i.fa-magnifying-glass {
   display: inline-block;
 }
+
+nav.removeNav {
+  padding: 20px;
+}
+
+nav.removeNav #btnRemove {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

@@ -27,6 +27,8 @@ button{
     }
 }
 
+
+
 header.container__header{
     position: relative;
     width: 100%;
@@ -123,4 +125,14 @@ i.fa-location-dot{
 
 i.fa-magnifying-glass{
     display: inline-block;
+}
+
+
+
+
+nav.removeNav{
+    padding: 20px;
+    #btnRemove{
+        display: block;
+    }
 }

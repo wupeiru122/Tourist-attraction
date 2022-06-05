@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <header class="container__header">
+        <div class="header">
+            <p class="header__title">我的最愛</p>  
+        </div>            
+    </header>
+
+    <nav class="removeNav">
+        <button id="btnRemove">移除我的最愛</button>
+    </nav>
+
+    <main class="viewpoint" id="viewpoint"></main>
+
+    
+    
+ 
+    <script>
+        const viewpoint = document.querySelector('#viewpoint');
+        let fakePic = 'https://via.placeholder.com/400x200';
+
+        showSpotList();
+        function showSpotList(){
+            viewpoint.innerHTML = '';
+            const favSpotListStr = sessionStorage.getItem('favSpotList');
+            const favSpotList = JSON.parse(favSpotListStr) ?? [];
+                for (let spot of favSpotList) {
+                    viewpoint.insertAdjacentHTML('beforeend', `
+                    <section class="col"">
+                        <figure class="viewpointCard">
+                            <img src="${spot.images[0]?.src ?? fakePic}" class="picCard" alt="...">
+                            <figcaption class="card-body">
+                                <input type="checkbox" id='cb${spot.id}'>
+                                <h4 class="card-title">${spot.name}</h4>
+                                <h4 class="card-distric"><i class="fa-solid fa-location-dot"></i>${spot.distric}</h4>
+                                <p class="card-text" style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;">
+                                    ${spot.introduction}
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </section>
+                    `);
+                }
+        }
+            
+           
+    </script>
+</body>
+
+</html>
