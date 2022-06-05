@@ -60,9 +60,11 @@ nav.btnNav{
     div.search{
         text-align: end;
         i.fa-magnifying-glass{
+            display: inline-block;
             padding: 5px;
         }
     }
+
     div.pageFav{
         position: relative;
         a.favList{
@@ -72,6 +74,9 @@ nav.btnNav{
             text-decoration:none;
             text-align: right;
             color: #306198;
+        }
+        i.fa-bookmark{
+            padding: 5px;
         }
     }
     
@@ -95,6 +100,12 @@ section.col{
 figure.viewpointCard{
     width: 400px;
 
+    .picCard {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
     figcaption.card-body{
         padding: 10px;
 
@@ -108,31 +119,39 @@ figure.viewpointCard{
             font-size: map-get($FontSize, h4);
 
         }
+
+        h4.card-distric{
+            margin-bottom: 10px;
+
+            i.fa-location-dot{
+                margin-right: 5px;
+            }
+        }
+        h5.card-tel{
+            margin-bottom: 10px;
+        }
+        p.card-text{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
     }
 }
 
 
 
-.picCard {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
 
-i.fa-location-dot{
-    margin-right: 5px;
-}
-
-i.fa-magnifying-glass{
-    display: inline-block;
-}
-
-
-
-
+//我的最愛列表
 nav.removeNav{
     padding: 20px;
     #btnRemove{
         display: block;
     }
+}
+
+button.edit{
+    margin: 10px;
+    
 }

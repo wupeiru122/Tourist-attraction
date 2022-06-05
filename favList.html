@@ -14,7 +14,7 @@
 
     <header class="container__header">
         <div class="header">
-            <p class="header__title">我的最愛</p>  
+            <p class="header__title">我的最愛列表</p>  
         </div>            
     </header>
 
@@ -48,12 +48,44 @@
                                 <p class="card-text" style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;">
                                     ${spot.introduction}
                                 </p>
+
+                                <button class="edit" id="btn${spot.id}" onClick="onEditClick(event)">編輯</button>
                             </figcaption>
                         </figure>
                     </section>
                     `);
                 }
-        }
+        };
+
+        //編輯
+        function onEditClick(e){
+            const button = e.target;
+            const intro = button.parentElement.parentElement.querySelector('.intro');
+            switch(button.textContent){
+                case '編輯':
+                    intro.setAttribute('contenteditable', true);
+                    intro.focus();
+                    button.textContent = '儲存';
+                    break;
+                case '儲存':
+                    if(intro.textContext === ''){
+                        return;
+                    }
+                    intro.setAttribute('contenteditable', false);
+                    button.textContent = '編輯';
+                    const id = +button.id.substr(3);
+                    save(id, intro.textContent);
+                    break;
+            }
+        };
+
+        function save(id, text){
+            const favSpotListStr = sessionStorage.getItem('favSpotList');
+            const favSpotList = JSON.parse(favSpotListStr);
+            const index = favSpotList.findIndex(spot => spot.id === id);
+            favSpotList[index].introduction = text;
+            sessionStorage.setItem('favSpotList', JSON.stringify(favSpotList));
+        };
             
            
     </script>

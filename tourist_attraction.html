@@ -37,6 +37,7 @@
 
             <a class="favList" href="./favList.html"><i class="fa-solid fa-bookmark"></i>查看我的最愛</a>
         </div>
+
     </nav>
 
     <main class="viewpoint" id="viewpoint"></main>
@@ -116,9 +117,9 @@
                             <input type="checkbox" id='cb${spot.id}'>
                             <h4 class="card-title">${spot.name}</h4>
                             <h4 class="card-distric"><i class="fa-solid fa-location-dot"></i>${spot.distric}</h4>
-                            <p class="card-text" style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;">
-                                ${spot.introduction}
-                            </p>
+                            <h5 class="card-address">地址: ${spot.address}</h5>
+                            <h5 class="card-tel">電話: ${spot.tel}</h5>
+                            <p class="card-text">${spot.introduction}</p>
                         </figcaption>
                     </figure>
                 </section>

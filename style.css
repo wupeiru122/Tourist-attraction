@@ -115,6 +115,7 @@ nav.btnNav div.search {
 }
 
 nav.btnNav div.search i.fa-magnifying-glass {
+  display: inline-block;
   padding: 5px;
 }
 
@@ -129,6 +130,10 @@ nav.btnNav div.pageFav a.favList {
   text-decoration: none;
   text-align: right;
   color: #306198;
+}
+
+nav.btnNav div.pageFav i.fa-bookmark {
+  padding: 5px;
 }
 
 main.viewpoint {
@@ -151,6 +156,13 @@ figure.viewpointCard {
   width: 400px;
 }
 
+figure.viewpointCard .picCard {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 figure.viewpointCard figcaption.card-body {
   padding: 10px;
 }
@@ -165,19 +177,24 @@ figure.viewpointCard figcaption.card-body h4.card-title {
   font-size: 1.25rem;
 }
 
-.picCard {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+figure.viewpointCard figcaption.card-body h4.card-distric {
+  margin-bottom: 10px;
 }
 
-i.fa-location-dot {
+figure.viewpointCard figcaption.card-body h4.card-distric i.fa-location-dot {
   margin-right: 5px;
 }
 
-i.fa-magnifying-glass {
-  display: inline-block;
+figure.viewpointCard figcaption.card-body h5.card-tel {
+  margin-bottom: 10px;
+}
+
+figure.viewpointCard figcaption.card-body p.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 nav.removeNav {
@@ -186,5 +203,9 @@ nav.removeNav {
 
 nav.removeNav #btnRemove {
   display: block;
+}
+
+button.edit {
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */
