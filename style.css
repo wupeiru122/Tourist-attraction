@@ -83,9 +83,24 @@ header.container__header {
   height: 300px;
   margin: auto;
   text-align: center;
-  border-bottom: solid 1px #dbe0df;
+  border-bottom: solid 1px #fff;
   background: -webkit-gradient(linear, left bottom, left top, from(#dbe0df), to(#306198));
   background: linear-gradient(to top, #dbe0df, #306198 100%);
+}
+
+header.container__header h4.comeback {
+  text-align: right;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+
+header.container__header h4.comeback a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header.container__header h4.comeback i.fa-arrow-up-right-from-square {
+  padding: 5px;
 }
 
 header.container__header .header {
@@ -189,7 +204,7 @@ figure.viewpointCard figcaption.card-body h5.card-tel {
   margin-bottom: 10px;
 }
 
-figure.viewpointCard figcaption.card-body p.card-text {
+figure.viewpointCard figcaption.card-body p.intro {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -205,7 +220,11 @@ nav.removeNav #btnRemove {
   display: block;
 }
 
-button.edit {
-  margin: 10px;
+div.btnBlock {
+  margin-top: 10px;
+}
+
+div.btnBlock button.edit {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

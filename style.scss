@@ -35,8 +35,20 @@ header.container__header{
     height: 300px;
     margin: auto;
     text-align: center;
-    border-bottom: solid 1px #dbe0df;
+    border-bottom: solid 1px #fff;
     background: linear-gradient(to top, #dbe0df, #306198 100%);
+    h4.comeback{
+        text-align: right;
+        font-size: map-get($FontSize, h4);
+        padding: 10px;
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        i.fa-arrow-up-right-from-square{
+            padding: 5px;
+        }
+    }
     .header {
         position: absolute;
         top: 50%;
@@ -130,7 +142,7 @@ figure.viewpointCard{
         h5.card-tel{
             margin-bottom: 10px;
         }
-        p.card-text{
+        p.intro{
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -151,7 +163,11 @@ nav.removeNav{
     }
 }
 
-button.edit{
-    margin: 10px;
-    
+div.btnBlock{
+    margin-top: 10px;
+
+    button.edit{
+        display: block;
+    }
 }
+
